@@ -25,4 +25,4 @@
         image: "haziqrozman/hariapp:{{DOCKER_TAG}}"
         state: started
         published_ports:
-          - 10.0.2.9:8080:8080
+          - 0.0.0.0:8080:8080
