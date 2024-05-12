@@ -1,7 +1,7 @@
 ---
 - hosts: dev
   become: True
-  become_user: haziqrozman
+  become_user: root
   become_method: sudo
   tasks:
     - name: Install python pip
