@@ -1,7 +1,6 @@
 ---
 - hosts: dev
   become: True
-  become_password: "12345"
   tasks:
     - name: Install python pip
       yum:
