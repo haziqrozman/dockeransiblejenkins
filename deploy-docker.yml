@@ -2,7 +2,7 @@
 - hosts: dev
   vars_prompt:
     - name: ansible_become_pass
-      prompt: 12345
+      prompt:
       private: yes
 
   become: True
