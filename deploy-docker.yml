@@ -1,39 +1,28 @@
 ---
 - hosts: dev
   become: True
-  become_user: haziqrozman
-  become_method: sudo
   tasks:
     - name: Install python pip
-      apt:
+      yum:
         name: python-pip
         state: present
-      become: yes
-
     - name: Install docker
-      apt:
-        name: docker.io
+      yum:
+        name: docker
         state: present
-      become: yes
-
     - name: start docker
       service:
         name: docker
         state: started
         enabled: yes
-      become: yes
-
     - name: Install docker-py python module
       pip:
-        name: docker
+        name: docker-py
         state: present
-      become: yes
-
     - name: Start the container
       docker_container:
         name: hariapp
-        image: "haziqrozman/hariapp:{{ DOCKER_TAG }}"
+        image: "haziqrozman/hariapp:{{DOCKER_TAG}}"
         state: started
         published_ports:
-          - "8080:8080"
-      become: yes
+          - 0.0.0.0:8080:8080
