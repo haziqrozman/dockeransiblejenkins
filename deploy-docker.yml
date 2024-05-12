@@ -2,7 +2,7 @@
 - hosts: dev
   vars_prompt:
     - name: ansible_become_pass
-      prompt: "Enter sudo password"
+      prompt: 12345
       private: yes
 
   become: True
