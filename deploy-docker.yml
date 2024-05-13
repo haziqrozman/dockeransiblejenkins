@@ -3,11 +3,11 @@
   become: True
   tasks:
     - name: Install python pip
-      apt-get:
+      apt:
         name: python-pip
         state: present
     - name: Install docker
-      apt-get:
+      apt:
         name: docker.io
         state: present
     - name: start docker   
