@@ -1,7 +1,6 @@
 ---
 - hosts: dev
   become: True
-  become_user: haziqrozman
   tasks:
     - name: Install python pip
       apt:
