@@ -22,7 +22,7 @@ pipeline{
         
         stage('Docker Build'){
             steps{
-                sh "docker build . -t haziqrozman/rockpaperscissorsapp:${DOCKER_TAG} "
+                sh "docker build . -t haziqrozman/webapp:${DOCKER_TAG} "
             }
         }
         
@@ -32,7 +32,7 @@ pipeline{
                     sh "docker login -u haziqrozman -p ${dockerHubPwd}"
                 }
                 
-                sh "docker push haziqrozman/rockpaperscissorsapp:${DOCKER_TAG} "
+                sh "docker push haziqrozman/webapp:${DOCKER_TAG} "
             }
         }
         
