@@ -21,7 +21,7 @@
         state: present
     - name: Start the container
       docker_container:
-        name: rockpaperscissorsapp
+        name: webapp
         image: "haziqrozman/webapp:{{DOCKER_TAG}}"
         state: started
         published_ports:
