@@ -21,7 +21,7 @@
         state: present
     - name: Start the container
       docker_container:
-        name: handson
+        name: rockpaperscissor
         image: "haziqrozman/rockpaperscissor:{{DOCKER_TAG}}"
         state: started
         published_ports:
