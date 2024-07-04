@@ -22,7 +22,7 @@
     - name: Start the container
       docker_container:
         name: handson
-        image: "haziqrozman/handson:{{DOCKER_TAG}}"
+        image: "haziqrozman/rockpaperscissor:{{DOCKER_TAG}}"
         state: started
         published_ports:
           0.0.0.0:8080:8080
